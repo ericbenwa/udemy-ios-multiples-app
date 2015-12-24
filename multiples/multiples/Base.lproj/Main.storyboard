@@ -48,19 +48,44 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ns-Ws-wIP"/>
+                                    <action selector="playGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8G-XZ-pNV"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-Qa-Kfw">
+                                <rect key="frame" x="185" y="140" width="230" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux8-wc-NEV" userLabel="addButton">
+                                <rect key="frame" x="225" y="462" width="150" height="48"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.12549019610000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="a5d-ug-O3b"/>
+                                    <constraint firstAttribute="width" constant="150" id="lg4-O9-EO6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIE-d4-mj9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ux8-wc-NEV" firstAttribute="centerX" secondItem="6Up-Xw-1aG" secondAttribute="centerX" id="68a-fU-ug3"/>
                             <constraint firstItem="5hd-LU-eKR" firstAttribute="centerX" secondItem="6Up-Xw-1aG" secondAttribute="centerX" id="Baa-Uk-YUv"/>
                             <constraint firstItem="yUK-Si-1gw" firstAttribute="centerX" secondItem="6Up-Xw-1aG" secondAttribute="centerX" id="DDE-bg-Wjg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X2Z-c0-Fbi" secondAttribute="trailing" constant="-20" id="R5J-b3-A1q"/>
+                            <constraint firstItem="ik0-Qa-Kfw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XrG-Ye-Gtt"/>
                             <constraint firstItem="5hd-LU-eKR" firstAttribute="top" secondItem="yUK-Si-1gw" secondAttribute="bottom" constant="23" id="Zis-5e-DCV"/>
                             <constraint firstItem="6Up-Xw-1aG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a9j-PY-N20"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ux8-wc-NEV" secondAttribute="bottom" constant="90" id="gkR-eh-1kr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5hd-LU-eKR" secondAttribute="bottom" constant="87" id="oa0-HH-Ijm"/>
                             <constraint firstItem="6Up-Xw-1aG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="pP9-bV-ZM9"/>
+                            <constraint firstItem="ik0-Qa-Kfw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="qaE-xZ-NO2"/>
                             <constraint firstItem="X2Z-c0-Fbi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="uxk-fz-0wQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5hd-LU-eKR" secondAttribute="bottom" constant="90" id="vFm-Wy-oMi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X2Z-c0-Fbi" secondAttribute="bottom" id="y16-H8-7KX"/>
@@ -73,6 +98,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="ux8-wc-NEV" id="eRh-z3-VuG"/>
+                        <outlet property="additionString" destination="ik0-Qa-Kfw" id="w91-0I-yfi"/>
                         <outlet property="inputMultiplyNumber" destination="yUK-Si-1gw" id="zMw-Gr-bVp"/>
                         <outlet property="logo" destination="6Up-Xw-1aG" id="Ncb-bi-8GS"/>
                         <outlet property="playButton" destination="5hd-LU-eKR" id="gVG-8h-9An"/>
