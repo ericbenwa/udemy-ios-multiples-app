@@ -46,6 +46,22 @@ class ViewController: UIViewController {
         addNumber = newSum
         print("addNumber: \(addNumber)")
         print("newSum: \(newSum)")
+        
+        // Reset the game
+        if newSum > 50 {
+            userNumber = 0
+            addNumber = 0
+            newSum = 0
+            
+            self.additionString.text = "Press Add to Add"
+            self.inputMultiplyNumber.text = nil
+            
+            logo.hidden = false
+            inputMultiplyNumber.hidden = false
+            playButton.hidden = false
+            additionString.hidden = true
+            addButton.hidden = true
+        }
     }
 
 }
